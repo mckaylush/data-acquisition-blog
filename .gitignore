@@ -1,0 +1,13 @@
+# Ignore large raw BTS files
+data/bts_raw/
+data/hist_*.csv
+
+# Ignore live snapshots (optional if large)
+data/live_*.csv
+data/flights_.csv
+
+# Ignore uncompressed zip data
+*.zip
+
+# Ignore raw OpenSky snapshots if they’re huge
+data/raw/
