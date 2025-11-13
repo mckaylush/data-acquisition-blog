@@ -110,7 +110,7 @@ This allowed direct comparison between:
 ![Flight Activity by Hour (OpenSky)](plots/activity_by_hour_opensky.png)
 
 
-Key takeaway possibilities:
+Key Takeaways:
 - This data isn't very useful at the moment, but the longer this blog exists, the more uesful it will become!  
 - Live data taken 3 times a day  
 
@@ -121,10 +121,10 @@ Key takeaway possibilities:
 ![Average Delay by Hour (BTS)](plots/average_delay_bts.png)
 
 
-Key takeaway possibilities:
-- There is a sharp increase of delays during the early hours of the day especially 3-4AM  
-- Which hours are most reliable  
-- Any “rush hour” delay effects around afternoon/evening  
+Key Takeaways:
+- There is a sharp increase of time of delays during the early hours of the day especially 3-4AM for all airlines
+- After the initial spike, the amount of time drops drastically and follows a steady increase throughout the day before coming to a low around 1 or 2 AM 
+- Any “rush hour” delay effects around afternoon/evening especially as other airlines are trying to leave around similar times 
 
 ---
 
@@ -133,11 +133,11 @@ Key takeaway possibilities:
 ![Distribution of Airline Delays](plots/delay_by_hour.png)
 
 
-Discuss:
-- skew in the distribution  
-- heavy tails from extremely late flights  
-- what the distribution says about reliability  
-
+Key Takeaways:
+- Some of the longest delays occur in the morning around 7 or 8 AM.  
+- High density of delays between 12 PM - 10 PM
+- A good amount of extremely long delays could be caused by weather or other uncontrollable delays  
+###### Y - axis should be 0-30 not 0 - 3000
 ---
 
 ### **Delay Variability by Hour (Boxplot)**
@@ -145,10 +145,9 @@ Discuss:
 ![Delay Distribution by Hour (BTS)](plots/delay_boxplot_bts.png)
 
 
-Interpret:
-- which hours have the widest spread of delays  
-- morning vs. afternoon stability  
-- presence of outliers  
+Key Takeaways:
+- Most of the delays are only 1-15 minutes long with very few going longer
+- Highly unlikely to get an extreme delay time (100+ minutes)  
 
 ---
 
@@ -157,22 +156,20 @@ Interpret:
 ![OpenSky Activity vs BTS Delays](plots/comparison.png)
 
 
-Questions to answer:
-- Do busy hours correlate with high delays?  
-- Are delays independent of traffic volume?  
-- What patterns stand out or contradict intuition?  
+Key Takeaways:
+- Not super helpful at the moment, but allows for us to compare current conditions with historic   
+- Will provide good evidence as to the change in air transportation  
 
 ---
 
 ## Key Findings
 
-Summarize your strongest insights here:
+- The busiest hours of the day were typically in the late morning and early afternoon, around **10 AM to 2 PM** based on the OpenSky live snapshots.  
+- The hours with the highest average delays were clearly **afternoon and evening periods**, especially between **3 PM and 9 PM**, where delay variability and severe disruptions increased sharply.  
+- Delay patterns did **not** line up perfectly with the busiest times of day. Even though mid-day had the most aircraft activity, the largest delays occurred later in the afternoon and evening, suggesting that delays accumulate over the course of the day rather than being driven purely by traffic volume.  
+- Morning flights tended to be more reliable, with tight, low-delay distributions and very few significant disruptions, while evening flights experienced more variability, higher medians, and more extreme outliers.  
+- Real-time airspace activity showed clear **midday peaks**, with aircraft counts rising in the mid to late morning, leveling out around midday, and then falling off into the evening.  
 
-- The busiest hours of the day were: **___**  
-- The hours with the highest delays were: **___**  
-- Delay patterns did/did not line up with the busiest times of day.  
-- Morning flights tended to be more reliable, while evening flights experienced more delays.  
-- Real-time airspace activity showed clear ___ patterns.  
 
 ---
 
@@ -218,7 +215,5 @@ All scripts used in this project are located in the `/src` directory:
 - `clean_bts.py`  
 - `clean_flights.py`  
 - `eda_combined.py`  
-
-Environment created using `uv`:
 
 

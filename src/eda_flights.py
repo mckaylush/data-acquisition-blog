@@ -65,8 +65,12 @@ plt.show()
 # Plot 3: Delay distribution (BTS)
 # -----------------------------------------
 plt.figure(figsize=(10,5))
-sns.histplot(bts["delay_minutes"], bins=50, kde=False)
-plt.title("Distribution of Airline Delays (BTS)")
+
+filtered = bts[(bts["delay_minutes"] > 0) & (bts["delay_minutes"] <= 500)]
+
+sns.histplot(filtered["delay_minutes"], bins=50, kde=False)
+
+plt.title("Distribution of Airline Delays (BTS) – 1 to 500 Minutes")
 plt.xlabel("Delay (minutes)")
 plt.ylabel("Count")
 plt.tight_layout()
