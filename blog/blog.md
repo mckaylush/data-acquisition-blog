@@ -122,7 +122,7 @@ Key takeaway possibilities:
 
 
 Key takeaway possibilities:
-- When delays tend to peak  
+- There is a sharp increase of delays during the early hours of the day especially 3-4AM  
 - Which hours are most reliable  
 - Any “rush hour” delay effects around afternoon/evening  
 

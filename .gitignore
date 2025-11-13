@@ -1,5 +1,5 @@
 # Ignore large raw BTS files
-data/bts_raw/
+data/bts_raw/On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)_2023_1.csv
 data/hist_*.csv
 
 # Ignore live snapshots (optional if large)
